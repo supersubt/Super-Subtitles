@@ -1,6 +1,7 @@
-# Super-Subtitles  <img src="https://user-images.githubusercontent.com/71334544/166090864-8e2053b9-186d-4e9e-98c3-406d1aa7eb8e.png"   />
+# <img src="https://user-images.githubusercontent.com/71334544/166090941-a10295dd-cfec-46d6-8056-aeffbb8640b8.png"  /> Super-Subtitles  
 
-Chrome Extension to learn English through Subtitles while watching YouTube 
+Chrome Extension to learn English through Subtitles while watching YouTube
+
 
 # How does it helps 
 
