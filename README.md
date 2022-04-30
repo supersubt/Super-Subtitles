@@ -1,6 +1,6 @@
 # Super-Subtitles
 
-Chrome Extension to learn English through Subtitles while watching YouTube
+Chrome Extension to learn English through Subtitles while watching YouTube <img src="https://user-images.githubusercontent.com/71334544/166090864-8e2053b9-186d-4e9e-98c3-406d1aa7eb8e.png"   />
 
 # How does it helps 
 
