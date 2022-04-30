@@ -30,5 +30,20 @@ Next step is to click on the highlighted word which pops up the definition box i
 - Store the searched words and access them later in the home page of the Chrome Extension  
 - Bring the pop up box near the word itself
 
+# How to use
 
+## Download ZIP from github and extract in your local PC
 
+<img src="https://user-images.githubusercontent.com/71334544/166092076-57d9f2df-dcd0-4c9e-8e5c-fbc38b14e340.png" width="400"/>
+
+## Open Chrome & go to chrome://extensions then turn on Developer Mode 
+
+<img src="https://user-images.githubusercontent.com/71334544/166092129-76ccc0c5-2536-4256-a174-8436d74c9406.png" width="400"/>
+
+## Click on "Load Unpacked"
+
+<img src="https://user-images.githubusercontent.com/71334544/166092152-637936f2-10c9-47ca-8727-d2d53834f9f3.png" width="400"/>
+
+## Now just select the extracted folder and you now you can use it 
+
+<img src="https://user-images.githubusercontent.com/71334544/166092169-a9faab31-7c77-4377-ae40-0f3b00f41fa9.png" width="400"/>
