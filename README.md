@@ -10,7 +10,7 @@ Non-native English speakers often tend to look for meaning of difficult words. L
 Wouldn't it be great if you could get the meaning of these words in the YouTube Video Player itself? Well thats pretty much what this extension does for you.
 Hover => Click => Learn
 
-# How does it work
+# How to use
 
 Just Hover and Click! 
 
@@ -30,7 +30,7 @@ Next step is to click on the highlighted word which pops up the definition box i
 - Store the searched words and access them later in the home page of the Chrome Extension  
 - Bring the pop up box near the word itself
 
-# How to use
+# How to install
 
 ## Download ZIP from github and extract in your local PC
 
