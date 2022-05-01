@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #e67e22;
+  background: #e62922;
   border-radius: 5rem;
 }
 
@@ -41,11 +41,11 @@ section {
   padding-bottom: 2rem;
   text-align: center;
   font-size: 3.5rem;
-  color: #130f40;
+  color: #000000;
 }
 
 .heading span {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .btn {
@@ -54,10 +54,10 @@ section {
   padding: .8rem 2.8rem;
   border-radius: 5rem;
   border-top-left-radius: 0;
-  border: 0.2rem solid #130f40;
+  border: 0.2rem solid #000000;
   cursor: pointer;
   background: none;
-  color: #130f40;
+  color: #000000;
   font-size: 1.7rem;
   overflow: hidden;
   z-index: 0;
@@ -71,7 +71,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #130f40;
+  background: #000000;
   z-index: -1;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -134,13 +134,14 @@ section {
 
 .header .logo {
   font-size: 2.5rem;
-  color: #130f40;
+  color: #000000;
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header .logo i {
-  color: #e67e22;
-}
+
 
 .header .navbar a {
   margin: 0 1rem;
@@ -149,20 +150,20 @@ section {
 }
 
 .header .navbar a:hover {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .header .icons a,
 .header .icons div {
   font-size: 2.5rem;
   margin-left: 1.5rem;
-  color: #130f40;
+  color: #000000;
   cursor: pointer;
 }
 
 .header .icons a:hover,
 .header .icons div:hover {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .header .login-form {
@@ -185,18 +186,18 @@ section {
 }
 
 .header .login-form h3 {
-  color: #130f40;
+  color: #000000;
   font-size: 2.5rem;
   padding-bottom: .5rem;
 }
 
 .header .login-form .box {
   width: 100%;
-  border-bottom: 0.2rem solid #130f40;
+  border-bottom: 0.2rem solid #000000;
   border-width: .1rem;
   padding: 1.5rem 0;
   font-size: 1.6rem;
-  color: #130f40;
+  color: #000000;
   text-transform: none;
   margin: 1rem 0;
 }
@@ -225,7 +226,7 @@ section {
 }
 
 .header .login-form .btn:hover {
-  background: #130f40;
+  background: #000000;
 }
 
 .header .login-form .links {
@@ -243,11 +244,11 @@ section {
 
 .header .login-form .links a {
   font-size: 1.4rem;
-  color: #e67e22;
+  color: #e62922;
 }
 
 .header .login-form .links a:hover {
-  color: #130f40;
+  color: #000000;
   text-decoration: underline;
 }
 
@@ -265,8 +266,8 @@ section {
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: url(../image/home_bg_img.jpg) no-repeat;
+          justify-content: flex-start;
+  background: url(../image/godfather2.png) no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -283,7 +284,7 @@ section {
 }
 
 .home .content h3 span {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .home .content .btn {
@@ -292,7 +293,7 @@ section {
 }
 
 .home .content .btn:hover {
-  color: #130f40;
+  color: #000000;
 }
 
 .home .content .btn::before {
@@ -320,6 +321,7 @@ section {
 }
 
 .about .image {
+  
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
@@ -336,12 +338,12 @@ section {
 }
 
 .about .content h3 {
-  color: #130f40;
+  color: #000000;
   font-size: 4rem;
 }
 
 .about .content h3 span {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .about .content p {
@@ -388,12 +390,12 @@ section {
 .dog-food .content h3,
 .cat-food .content h3 {
   font-size: 3.5rem;
-  color: #130f40;
+  color: #000000;
 }
 
 .dog-food .content h3 span,
 .cat-food .content h3 span {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .dog-food .content p,
@@ -407,7 +409,7 @@ section {
 .dog-food .content .amount,
 .cat-food .content .amount {
   font-size: 3.5rem;
-  color: #130f40;
+  color: #000000;
   padding: .5rem 0;
 }
 
@@ -481,13 +483,13 @@ section {
   font-size: 2.2rem;
   margin-top: 1rem;
   background: #fff;
-  color: #130f40;
+  color: #000000;
   text-align: center;
 }
 
 .shop .box-container .box .icons a:hover {
   color: #fff;
-  background: #e67e22;
+  background: #e62922;
 }
 
 .shop .box-container .box .content {
@@ -497,13 +499,13 @@ section {
 
 .shop .box-container .box .content h3 {
   font-size: 2.2rem;
-  color: #130f40;
+  color: #000000;
   padding-bottom: .5rem;
 }
 
 .shop .box-container .box .content .amount {
   font-size: 2rem;
-  color: #e67e22;
+  color: #e62922;
 }
 
 .services .box-container {
@@ -535,14 +537,14 @@ section {
   line-height: 6.5rem;
   font-size: 3rem;
   color: #fff;
-  background: #e67e22;
+  background: #e62922;
   border-radius: 50%;
   margin-bottom: .5rem;
 }
 
 .services .box-container .box h3 {
   font-size: 2.2rem;
-  color: #130f40;
+  color: #000000;
   padding: 1rem 0;
 }
 
@@ -572,18 +574,18 @@ section {
 
 .plan .box-container .box .title {
   text-align: center;
-  color: #e67e22;
+  color: #e62922;
   font-size: 2rem;
 }
 
 .plan .box-container .box .day {
   text-align: center;
-  color: #130f40;
+  color: #000000;
   font-size: 3.5rem;
 }
 
 .plan .box-container .box .icon {
-  color: #e67e22;
+  color: #e62922;
   font-size: 5rem;
   padding: 2rem 0;
 }
@@ -608,13 +610,13 @@ section {
 }
 
 .plan .box-container .box .list p span {
-  color: #e67e22;
+  color: #e62922;
 }
 
 .plan .box-container .box .amount {
   font-size: 5rem;
   font-weight: bolder;
-  color: #130f40;
+  color: #000000;
 }
 
 .plan .box-container .box .amount span {
@@ -657,22 +659,22 @@ section {
 }
 
 .contact form .btn:hover {
-  background: #130f40;
+  background: #000000;
 }
 
 .contact form h3 {
   font-size: 3rem;
   padding-bottom: 1rem;
-  color: #130f40;
+  color: #000000;
 }
 
 .contact form .box, .contact form textarea {
   width: 100%;
-  border-bottom: 0.2rem solid #130f40;
+  border-bottom: 0.2rem solid #000000;
   border-width: .1rem;
   font-size: 1.6rem;
   text-transform: none;
-  color: #130f40;
+  color: #000000;
   padding: 1.5rem 0;
   margin: 1rem 0;
 }
@@ -717,7 +719,7 @@ section {
 }
 
 .footer .share a:hover {
-  color: #130f40;
+  color: #000000;
 }
 
 .footer .share a::before {
@@ -737,7 +739,7 @@ section {
 }
 
 .footer .credit span {
-  color: #e67e22;
+  color: #e62922;
 }
 
 @media (max-width: 991px) {
