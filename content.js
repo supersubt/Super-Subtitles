@@ -111,108 +111,117 @@ function mouseEnterEvent(word, event){
 
 function mouseLeaveEvent(element){
   element.style.cssText = "";
-  let video = document.getElementsByTagName('video');
-    video[0].play();
 }
+
+var clicked = false;
 
 function mouseClickEvent(word,event){
   // console.log(word);
   event.preventDefault();
 
-  try{
-    dboxes = document.querySelectorAll(".dbox");
-    for (let dbox of dboxes){
-      dbox.remove();
-      console.log("removed");
+  if(clicked===false){
+
+    try{
+      dboxes = document.querySelectorAll(".dbox");
+      for (let dbox of dboxes){
+        dbox.remove();
+        console.log("removed");
+      }
+    }catch(err){
+      console.log(err)
     }
-  }catch(err){
-    console.log(err)
-  }
 
-  let container = document.getElementById("ytp-caption-window-container")
+    let container = document.getElementById("ytp-caption-window-container")
 
-  let box = document.createElement("div");
-  box.className = "dbox"
-  box.style.cssText = "color: black; border: 2px solid rgba(255, 0,0, 1); width:30%; position: absolute; padding: 10px; margin: 20px; border-radius: 20px; z-index: 9999 !important; background-color: rgba(255, 255, 255, 1) !important;"
+    let box = document.createElement("div");
+    box.className = "dbox"
+    box.style.cssText = "color: black; border: 2px solid rgba(255, 0,0, 1); width:30%; position: absolute; padding: 10px; margin: 20px; border-radius: 20px; z-index: 9999 !important; background-color: rgba(255, 255, 255, 1) !important;"
 
-  let header = document.createElement("div");
-  header.style.cssText = "display: flex; justify-content:center";
-  dcross = document.createElement("h2");
-  dcross.className = "dcross";
-  dcross.innerHTML = "SuperSub 🦸🏻‍♂️"
+    let header = document.createElement("div");
+    header.style.cssText = "display: flex; justify-content:center";
+    dcross = document.createElement("h2");
+    dcross.className = "dcross";
+    dcross.innerHTML = "SuperSub 🦸🏻‍♂"
 
-  dbody = document.createElement("div")
-  dbody.innerHTML = "Please wait 🙏🏻"
-  dbody.style.cssText = "margin-top: 10px;"
+    dbody = document.createElement("div")
+    dbody.innerHTML = "Please wait 🙏🏻"
+    dbody.style.cssText = "margin-top: 10px;"
 
-  container.appendChild(box);
-  box.appendChild(header);
-  header.appendChild(dcross);
-  box.appendChild(dbody);
- 
-  chrome.runtime.sendMessage(word, function (response){
-    // console.log(response)
+    container.appendChild(box);
+    box.appendChild(header);
+    header.appendChild(dcross);
+    box.appendChild(dbody);
+   
+    chrome.runtime.sendMessage(word, function (response){
+      // console.log(response)
 
-    if(response["status"]==="success"){
-
-      try{
-        dbody.innerHTML = ""
-
-        word = document.createElement("h3");
-        word.className = "word";
-        word.innerHTML = response["word"]
-        dbody.appendChild(word)
-  
-        pos = document.createElement("div");
-        pos.className = "pos";
-        pos.style.cssText = "color: rgba(0,0,0,0.75)"
-        pos.innerHTML = response["pos"]
-        dbody.appendChild(pos)
-  
-        definition = document.createElement("div");
-        definition.className = "definition";
-        definition.innerHTML = `> Definition : ${response['definition']}`
-        definition.style.cssText = "margin-top:10px;";
-        dbody.appendChild(definition)
+      if(response["status"]==="success"){
 
         try{
+          dbody.innerHTML = ""
 
-          if (response['example'] === undefined){
-            throw "No example available";
-          } 
-          example = document.createElement("div");
-          example.className = "example";
-          example.innerHTML = `> Example : ${response['example']}`
-          example.style.cssText = "margin-top:10px;";
-          dbody.appendChild(example)
-        }catch(err){
-          console.log(err)
+          word = document.createElement("h3");
+          word.className = "word";
+          word.innerHTML = response["word"]
+          dbody.appendChild(word)
+    
+          pos = document.createElement("div");
+          pos.className = "pos";
+          pos.style.cssText = "color: rgba(0,0,0,0.75)"
+          pos.innerHTML = response["pos"]
+          dbody.appendChild(pos)
+    
+          definition = document.createElement("div");
+          definition.className = "definition";
+          definition.innerHTML = `> Definition : ${response['definition']}`
+          definition.style.cssText = "margin-top:10px;";
+          dbody.appendChild(definition)
+
+          try{
+
+            if (response['example'] === undefined){
+              throw "No example available";
+            } 
+            example = document.createElement("div");
+            example.className = "example";
+            example.innerHTML = `> Example : ${response['example']}`
+            example.style.cssText = "margin-top:10px;";
+            dbody.appendChild(example)
+          }catch(err){
+            console.log(err)
+          }
+    
+    
+    
+    
+        }catch{
+          dbody.innerHTML = ""
+          sorry = document.createElement("div");
+          sorry.className = "sorry";
+          sorry.innerHTML = "Sorry! something went wrong!"
+          dbody.appendChild(sorry)
+
         }
-  
-  
-  
-  
-      }catch{
+      }
+      else{
         dbody.innerHTML = ""
+
         sorry = document.createElement("div");
         sorry.className = "sorry";
         sorry.innerHTML = "Sorry! something went wrong!"
         dbody.appendChild(sorry)
 
       }
-    }
-    else{
-      dbody.innerHTML = ""
-
-      sorry = document.createElement("div");
-      sorry.className = "sorry";
-      sorry.innerHTML = "Sorry! something went wrong!"
-      dbody.appendChild(sorry)
-
-    }
-   
-  });
+     
+    });
   
+  }
+
+  else{
+    element.style.cssText = "";
+    let video = document.getElementsByTagName('video');
+    video[0].play();
+  }
 
 
 }
